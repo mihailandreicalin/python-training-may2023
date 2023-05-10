@@ -29,8 +29,10 @@ class MyClass:
     pass
 
 
-func(22)
+# print("__name__ =", __name__)
+if __name__ == "__main__":
+    func(22)
 
-print('-- global --')
-print("Built-in names:", len, str, ValueError)
-print("Global names:", X, func, MyClass)
+    print('-- global --')
+    print("Built-in names:", len, str, ValueError)
+    print("Global names:", X, func, MyClass)
