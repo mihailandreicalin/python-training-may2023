@@ -1,4 +1,5 @@
 from datetime import date
+import random
 
 
 class Person:
@@ -47,6 +48,21 @@ class Person:
         return self.age < other.age
 
 
+class Student(Person):
+    count = 0
+
+    def __init__(self, name, date_of_birth, university):
+        super().__init__(name, date_of_birth)
+        self.university = university
+
+    def __str__(self):
+        return f"{self.__class__.__name__} (name={self.name}, age={self.age}, "\
+               f"university={self.university})"
+
+    def get_grade(self, subject):
+        return random.randint(3, 10)
+
+
 if __name__ == "__main__":
     p1 = Person('Anna', date(1984, 3, 21))
     p1.date_of_birth = date(1959, 1, 1)
@@ -67,3 +83,9 @@ if __name__ == "__main__":
     # print(Person.count)
 
     print("Static method compute_age:", Person.compute_age(date(1999, 10, 2)))
+
+    s1 = Student("Jane Smith", date(2001, 4, 13), "Universitatea București")
+    print(s1)
+    s1.greet("Good day")
+    print(s1.get_grade("Math"))
+    print("Students:", Student.count, "Persons:", Person.count)
