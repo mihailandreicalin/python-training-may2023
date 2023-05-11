@@ -33,3 +33,14 @@ print(*l)  # called print with len(l) arguments
 
 person = {"name": "Jane", "age": 20, "occupation": "student"}
 print("{name} is {age} years old. {name} is a {occupation}.".format(**person))
+
+
+# type hints
+def greet(name: str):
+    # if not isinstance(name, str):
+    #     raise TypeError("Expected str argument")
+    print(f"hello, {name}")
+
+
+greet(10)
+greet("Anna")
