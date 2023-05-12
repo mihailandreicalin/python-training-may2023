@@ -42,7 +42,8 @@ except InsufficientFundsException as ex:
     print("Trying to withdraw 100:", ex)
 print('Balance after trying to withdraw 100:', bank_acc.balance)
 
-# 3. Create a class called Rectangle with attributes width and height. Add
+
+# 2. Create a class called Rectangle with attributes width and height. Add
 # methods get_area and get_perimeter that calculate and return the area and
 # perimeter of the rectangle.
 
@@ -66,6 +67,60 @@ area = rectangle.get_area()
 perimeter = rectangle.get_perimeter()
 
 print(f'{rectangle} has area of {area} and perimeter of {perimeter}.')
+
+
+# 3. Create class Dish - instance attributes: id (int), name (str), price (int)
+
+class Dish:
+    def __init__(self, id_, name, price):
+        self.id = id_
+        self.name = name
+        self.price = price
+
+    def __repr__(self):
+        return f"{self.__class__.__name__} object (id={self.id} "\
+               f"name={self.name} price={self.price})"
+
+
+# 4. Create class Menu - instance attributes: dishes (list of Dish objects).
+# Implement appropriate methods so that Menu objects support the following
+# operations:
+#  d = Dish(0, 'Lasagna', 20)
+#  m = Menu()
+#  m += d  # dish appended to m.dishes
+#  m[0]  # implement getitem on Menu
+#  d in m  # implement membership test operators
+#  len(m)  # return length of m.dishes
+
+class Menu:
+    def __init__(self, dishes=None):
+        self.dishes = dishes or []
+
+    def __iadd__(self, dish):
+        self.dishes.append(dish)
+        return self
+
+    def __getitem__(self, idx):
+        return self.dishes[idx]
+
+    def __contains__(self, dish):
+        return dish in self.dishes
+
+    def __len__(self):
+        return len(self.dishes)
+
+
+dish1 = Dish(1, 'Lasagna', 30)
+dish2 = Dish(2, 'Pizza', 35)
+dish3 = Dish(3, 'Pasta', 32)
+
+menu = Menu()
+menu += dish1
+menu += dish2
+print("First item on the menu:", menu[0])
+print(dish2, "is on the menu:", dish2 in menu)
+print(dish3, "is on the menu:", dish3 in menu)
+print("Number of items in the menu:", len(menu))
 
 
 # 4. Create a class Employee with three instance attributes:
