@@ -5,9 +5,10 @@ from oop import Person
 
 
 class TestDateOfBirth(unittest.TestCase):
-    def setUp(self):
-        self.valid_date = date(1999, 4, 5)
-        self.invalid_date = date(1949, 4, 5)
+    @classmethod
+    def setUpClass(cls):
+        cls.valid_date = date(1999, 4, 5)
+        cls.invalid_date = date(1949, 4, 5)
 
     def test_initialize_person_with_valid_date(self):
         person = Person('Anna', self.valid_date)
@@ -24,6 +25,7 @@ class TestDateOfBirth(unittest.TestCase):
 
     def test_set_date_of_birth_to_invalid_date(self):
         person = Person('Anna', self.valid_date)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError, msg="did not raise the exception"):
             person.date_of_birth = self.invalid_date
-        self.assertEqual(self.valid_date, person.date_of_birth)
+        self.assertEqual(self.valid_date, person.date_of_birth,
+                         "date_of_birth changed")
