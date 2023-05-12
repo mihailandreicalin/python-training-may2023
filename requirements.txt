@@ -1,2 +1,4 @@
+Django==4.2.1
+ipdb==0.13.13
 ipython==8.13.2
 jupyter==1.0.0
