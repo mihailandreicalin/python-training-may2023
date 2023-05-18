@@ -1,3 +1,16 @@
+Prerequisites:
+1. Python 3.8+: https://www.python.org/downloads/
+2. PyCharm Community Edition: https://www.jetbrains.com/pycharm/download/
+3. Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+We will be using pip to install 3rd party packages, so please make sure you can run pip install <package> on your machine:
+PyCharm -> Create New Project -> Check Project Interpreter: New Virtual environment -> Create
+Once the new project in created, go to Terminal tab and execute the following command:
+pip install ipython
+The installation should end with a success message: Successfully installed <list of packages>.
+
+
+
 https://codeshare.io/
 https://github.com/iuliachiriac/python-training-may2023
 
