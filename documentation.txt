@@ -1,0 +1,37 @@
+https://codeshare.io/
+https://github.com/iuliachiriac/python-training-may2023
+
+formatare:
+https://pep8.org/
+
+pypi.org - pachete folosite de python
+
+1. Install the requirements
+pip install - requirements.txt
+
+Standard library:
+https://docs.python.org/3/library/
+Built-in Functions
+https://docs.python.org/3/library/functions.html
+
+https://docs.python.org/3/library/string.html?highlight=string%20format#format-string-syntax
+https://docs.python.org/3/library/string.html?highlight=string%20format#format-specification-mini-language
+https://docs.python.org/3/reference/expressions.html#operator-precedence
+
+Exceptions:
+https://docs.python.org/3/library/exceptions.html
+
+Keyword arguments
+https://blog.ml6.eu/designing-better-python-interfaces-with-keyword-only-arguments-61888040d971
+
+Iterators vs generators
+https://nvie.com/posts/iterators-vs-generators/
+
+Return early pattern:
+https://medium.com/swlh/return-early-pattern-3d18a41bba8#:~:text=Return%20early%20is%20the%20way,when%20conditions%20are%20not%20met.
+
+Special methods:
+https://diveintopython3.net/special-method-names.html
+
+Django tutorial:
+https://docs.djangoproject.com/en/4.2/intro/tutorial01/
